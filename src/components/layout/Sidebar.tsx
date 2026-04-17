@@ -13,7 +13,6 @@ import {
   X
 } from "lucide-react";
 import { useState } from "react";
-import { UserRole } from "@/models/User";
 
 interface SidebarProps {
   user: {
@@ -33,7 +32,7 @@ export default function Sidebar({ user }: SidebarProps) {
   ];
 
   // Specific role items
-  if (user?.role === UserRole.ADMIN || user?.role === UserRole.ORGANIZER) {
+  if (user?.role === "ADMIN" || user?.role === "ORGANIZER") {
     mainNavItems.push({ name: "My Events", href: "/events/manage", icon: Users });
   }
 
